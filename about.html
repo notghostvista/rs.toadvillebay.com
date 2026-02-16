@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О Нама – Република ToadVille Bay (Србија)</title>
+    <meta content="Добродошли - Република ToadVille Bay (Србија)" property="og:title" />
+    <meta content="Сазнајте више о Републици ToadVille Bay." property="og:description" />
+    <meta content="https://toadvillebay.com/about.html" property="og:url" />
+    <meta content="https://toadvillebay.com/Images and Videos/ToadVilleCOA.png" property="og:image" />
+    <link rel="icon" type="image/png" href="./Images and Videos/ToadVilleCOA.png" />
+    <link rel="apple-touch-icon" href="./Images and Videos/ToadVilleCOA.png" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .profile-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, var(--tvb-surface-alt), white);
+        }
+
+        .profile-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--tvb-primary);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            background: white;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        .profile-image:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 2.5em;
+            color: var(--tvb-primary);
+            margin-bottom: 10px;
+        }
+
+        .profile-title {
+            font-size: 1.2em;
+            color: var(--tvb-text);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .profile-bio {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            color: var(--tvb-text);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .about-card {
+            background: rgb(0, 0, 0);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .about-card h2 {
+            color: var(--tvb-primary);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .about-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--tvb-text);
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--tvb-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 15px;
+        }
+
+        .cta-button:hover {
+            background: var(--tvb-primary-dark);
+            transform: scale(1.05);
+        }
+
+        .legal-section {
+            background: var(--tvb-surface-alt);
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .legal-card {
+            background: rgb(0, 0, 0);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .legal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .legal-card h3 {
+            color: var(--tvb-primary);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .legal-card p {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: var(--tvb-text);
+            opacity: 0.9;
+        }
+
+        .legal-card .cta-button {
+            background: var(--tvb-primary);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .legal-card .cta-button:hover {
+            background: var(--tvb-primary-dark);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2em;
+            }
+
+            .about-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="site-header__top">
+            <a class="site-brand" href="/index.html">
+                <img src="Images and Videos/flag.png" alt="ToadVille Bay Србија" class="brand-mark" />
+                <span class="brand-text">ToadVille Bay</span>
+            </a>
+            <div class="site-utils">
+                <form class="site-search" role="search" aria-label="Претрага сајта" onsubmit="handleSearch(event)">
+                    <label for="q" class="sr-only">Претражи ToadVille Bay</label>
+                    <input id="q" name="q" type="search" placeholder="Претражи ToadVille Bay" />
+                    <button type="submit">Претражи</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-images">
+            <div class="profile-image">
+                <img src="Images and Videos/gabemedgutierrez.jpg" alt="Site owner (IRL)" />
+            </div>
+        </div>
+        <h1 class="profile-name">Габријел Медрано Гутијерез</h1>
+        <p class="profile-title">Творац и дизајнер <strong><em>Републике ToadVille Bay</em></strong></p>
+        <p class="profile-bio">
+            Веб-разработљач и дизајнер мексичко-калифорнијског порекла, доносим јединствену неуротипску перспективу на дигиталну дизајн. Као аутистични креатор, преобраћавам своју страст за приступачност и корисничко искуство у преосмишљавање јавних услуга. ToadVille Bay Србија је инспирисана игрицом истог назива, претварајући њен виртуелни свет у истраживање како би владине веб-локације биле занимљивије и укључивније. Овај пројекат комбинује љубав према видео-играма са мисијом да јавне услуге буду приступачније и пријатније за све.
+        </p>
+    </section>
+
+    <main class="about-container">
+        <div class="about-grid">
+            <div class="about-card">
+                <h2>Шта је Република ToadVille Bay</h2>
+                <p>
+                    Република ToadVille Bay (ROTB, RTB) је фиктивна земља смештена у универзум богат историјом и легендом, тренутно у развоју као видео игра. Има пуно за истраживање, а ToadVille Bay Србија је такође комунални пројекат који помаже да се универзум буде намного већи од онога што је данас.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2>Шта је ToadVille Bay Србија в ROTB</h2>
+                <p>
+                    ToadVille Bay Србија је назив за пословање, ROTB је назив фиктивне земље, TB Србија се користи за пословне ствари, као што су издаватељство и робна марка, док се ROTB користи за све ToadVille Bay ентитете у свакој земљи као фиктивна локација унутар ToadVille Bay Lorum.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2>Дигитална иновација</h2>
+                <p>
+                   <strong>Република ToadVille Bay</strong> делује као фиктивна влада. Овај веб-сајт циља да реплицира ToadVille Bay услуге унутар игре. Овде такође можете пронаћи саветe за игру или вики креиране од стране фана, у зависности од тога шта вам најбоље одговара.
+                </p>
+            </div>
+        </div>
+
+        <section class="legal-section">
+            <div class="about-container">
+                <div class="legal-grid">
+                    <div class="legal-card">
+                        <h3>Полиса о приватности</h3>
+                        <p>Сазнајте како се информације обрађују и како је приватност заштићена у овом демонстрационом пројекту.</p>
+                        <a href="Legal/privacy.html" class="cta-button">Прочитај полису</a>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>Услови коришћења</h3>
+                        <p>Разумите услове који регулишу коришћење веб-сајта.</p>
+                        <a href="Legal/termsofservice.html" class="cta-button">Прегледај услове</a>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>Правила заједнице</h3>
+                        <p>Прочитајте стандарде заједнице и очекивања учешћа.</p>
+                        <a href="Legal/communityguidelines.html" class="cta-button">Прочитај правила</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img class="footer-brand-img" src="Images and Videos/flag.png" alt="ToadVille Bay Србија" />
+            </div>
+            <div class="footer-links-columns">
+                <div>
+                    <h4>О Нама</h4>
+                    <ul>
+                        <li><a href="About/community.html">Наша заједница</a></li>
+                        <li><a href="About/departments.html">Одељења</a></li>
+                        <li><a href="About/contact.html">Контактирајте нас</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ресурси</h4>
+                    <ul>
+                        <li><a href="resources/programs-services.html">Програми и услуге</a></li>
+                        <li><a href="resources/permits-licenses.html">Дозволе и лиценце</a></li>
+                        <li><a href="resources/accessibility.html">Приступачност</a></li>
+                        <li><a href="resources/sitemap.html">Мапа сајта</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Правне</h4>
+                    <ul>
+                        <li><a href="Legal/termsofservice.html">Услови коришћења</a></li>
+                        <li><a href="Legal/privacy.html">Приватност</a></li>
+                        <li><a href="Legal/communityguidelines.html">Правила заједнице</a></li>
+                        <li><a href="Legal/cookies.html">Колачићи</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer-brand" style="grid-column: 1 / -1; text-align:center;">
+                    <span class="site-footer-text">© ToadVille Bay од Србије 2019–2026</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/site-search.js"></script>
+    <script src="scripts/footer.js"></script>
+</body>
+</html>

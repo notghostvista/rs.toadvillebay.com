@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Почетна - Република ToadVille Bay (Србија)</title>
+  <meta content="Почетна - Република ToadVille Bay (Србија)" property="og:title" />
+  <meta content="Пронађите програме, услуге и информације за становнике и нове доселяке u ToadVille Bay." property="og:description" />
+  <meta content="https://toadvillebay.com/" property="og:url" />
+  <meta content="https://toadvillebay.com/Images and Videos/ToadVilleCOA.png" property="og:image" />
+  <meta content="#0066CC" data-react-helmet="true" name="theme-color" />
+  <link rel="icon" type="image/png" href="./Images and Videos/ToadVilleCOA.png" />
+  <link rel="apple-touch-icon" href="./Images and Videos/ToadVilleCOA.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* Page-scoped background (English/en.html only) */
+    .sun-bg {
+      position: relative;
+      min-height: 100vh;
+    }
+    .sun-bg::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('./Images and Videos/ToadVilleCOA.png') center/700px no-repeat;
+      opacity: 0.10; /* subtle watermark */
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Ensure content renders above the decorative background */
+    .sun-bg .site-header,
+    .sun-bg .hero,
+    .sun-bg .page-content,
+    .sun-bg .site-footer { position: relative; z-index: 1; }
+  </style>
+</head>
+<body class="sun-bg">
+  <!-- En-tête global -->
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <a class="site-brand" href="/index.html">
+        <img src="./Images and Videos/flag.png" alt="Baie de ToadVille" class="brand-mark" />
+        <span class="brand-text">ToadVille Bay</span>
+      </a>
+      <div class="site-utils">
+        <form class="site-search" role="search" aria-label="Претрага на сајту" onsubmit="handleSearch(event)">
+          <label for="q" class="sr-only">Претрага</label>
+          <input id="q" name="q" type="search" placeholder="Претражи ToadVille Bay" />
+          <button type="submit">Претрага</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bannière d’accueil -->
+  <section class="hero" aria-label="Welcome">
+    <div class="hero__content">
+      <h1>Добродошли у <i>Републику ToadVille Bay</i></h1>
+      <p>Пронађите програме, услуге и информације.</p>
+      <a class="btn-primary" href="#services">Прегледај те услуге</a>
+    </div>
+  </section>
+
+  <!-- Grille des sujets / services -->
+  <main class="page-content">
+    <section id="programs" class="most-requested" aria-labelledby="mr-title">
+      <h2 id="mr-title">Најтоже
+тражено</h2>
+      <ul class="link-list">
+        <li><a href="./TBExit27.html">TBExit27</a></li>
+        <li><a href="./About/piracy.html">Анти-пиратерија</a></li>
+        <li><a href="./Legal/sanctions.html">Наполи и пропис</a></li>
+        <li><a href="./About/steam-version-eos.html">Информације о држави Windows Vista 8.0</a></li>
+        <li><a href="./prime-minister.html">Поприм Министар</a></li>
+        <li><a href="./provincial-flag-reform.html">Ажурирања војводинске заставе</a></li>
+      </ul>
+    </section>
+
+    <section id="services" class="card-grid" aria-labelledby="services-title">
+      <h2 id="services-title">Услуге и информације</h2>
+      <div class="grid">
+        <a class="card" href="Immigration/immigration.html" aria-label="Услуге имиграције">
+          <h3>Имиграција</h3>
+          <p>Визе, дозволе, спонзорство полови и ресурси насељавања.</p>
+        </a>
+        <a class="card" href="Provinces/provinces.html" aria-label="Покрајине">
+          <h3>Покрајине</h3>
+          <p>Информације о свакој покрајини и њиховім единственим особинама.</p>
+        </a>
+        <a class="card" href="Cities/cities.html" aria-label="Градови">
+          <h3>Градови</h3>
+          <p>Информације о сваком граду и њихове єдинствене особине.</p>
+        </a>
+        <a class="card" href="Guides/guides.html" aria-label="Приручнице">
+          <h3>Приручнице и савети</h3>
+          <p>Научите се како да играте видео игру ToadVille Bay.</p>
+        </a>
+        <a class="card" href="Citizenship/citizenship.html" aria-label="Услуге грађанства">
+          <h3>Грађанство</h3>
+          <p>Пријаве за грађанство, испити, церемоније и доказ стања.</p>
+        </a>
+        <a class="card" href="Culture and History/cultureandhistory.html" aria-label="Култура и историја">
+          <h3>Култура и историја</h3>
+          <p>Откријте шта обликује ToadVille Bay.</p>
+        </a>
+        <a class="card" href="Government/government.html" aria-label="Коментар">
+          <h3>Влада</h3>
+          <p>сажни сте влади тоадвилле бей и ко ради за њу.</p>
+        </a>
+        <a class="card" href="Environment/environment.html" aria-label="Околина">
+          <h3>Околина</h3>
+          <p>Очување, паркови и заштита обале.</p>
+        </a>
+        <a class="card" href="Transportation/transportation.html" aria-label="Транспорт">
+          <h3>Транспорт</h3>
+          <p>Пруге, транспорт и активне вожње.</p>
+        </a>
+        <a class="card" href="Law/laws.html" aria-label="Зањани">
+          <h3>Зањани</h3>
+          <p>Погледајте законе ToadVille Bay, законодавство и устав.</p>
+    </section>
+
+    <section id="news" class="news" aria-labelledby="news-title">
+      <h2 id="news-title">Вести</h2>
+      <article class="news-item">
+        <h3><a href="#">Анаџуња</a></h3>
+        <p class="meta">септембар 2025 · ToadVille Bay</p>
+        <p>Фаза 2 врло ново осветљења, нъоже и uбољана дознаке.</p>
+      </article>
+      <article class="news-item">
+        <h3><a href="#">Јасенско ќъщећа ў жеће – доброволъци тѠбаѓі</a></h3>
+        <p class="meta">септембар 2025 · ToadVille Bay</p>
+        <p>Достаните нас да uдржавимо нашу обалу чистом и притворном.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Pied de page global -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-brand-img" src="./Images and Videos/flag.png" alt="Baie de ToadVille" />
+      </div>
+      <div class="footer-links-columns">
+        <div>
+          <h4>О Нама</h4>
+          <ul>
+            <li><a href="#">Наша заједница</a></li>
+            <li><a href="#">Оделења</a></li>
+            <li><a href="#">Кариера</a></li>
+            <li><a href="#">Контактирајте нас</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ресурси</h4>
+          <ul>
+            <li><a href="#">Programi i usluge</a></li>
+            <li><a href="#">Пребисҋи и йиценце</a></li>
+            <li><a href="#">Доступност</a></li>
+            <li><a href="#">Мапа сајта</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Правне</h4>
+          <ul>
+            <li><a href="./Legal/termsofservice.html">Услови кориЉења</a></li>
+            <li><a href="./Legal/privacy.html">Приватност</a></li>
+            <li><a href="./Legal/communityguidelines.html">Правила заједнице</a></li>
+            <li><a href="#">Бисквит</a></li>
+          </ul>
+        </div>
+        <div class="site-footer-brand" style="grid-column: 1 / -1; text-align:center;">
+          <span class="site-footer-text">© ToadVille Bay od Srbije 2019-2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts/site-search.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Добродошли - Република ToadVille Bay (Србија)</title>
+
+  <meta property="og:title" content="Добродошли - Република ToadVille Bay (Србија)" />
+  <meta property="og:description" content="Званични веб-сајт владе ToadVille Bay - Имиграција, грађанство, послови и услуге заједнице." />
+  <meta property="og:url" content="https://toadvillebay.com/" />
+  <meta property="og:image" content="https://toadvillebay.com/Images and Videos/ToadVilleCOA.png" />
+  <meta name="theme-color" content="#0066CC" />
+
+  <link rel="icon" type="image/png" href="./Images and Videos/ToadVilleCOA.png" />
+  <link rel="apple-touch-icon" href="./Images and Videos/ToadVilleCOA.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="landing">
+  <div class="container">
+    <main class="landing-content" role="main">
+      <div class="header">
+        <img class="site-flag" src="./Images and Videos/ToadVille Bay - Tasiq Nunaat.png" alt="ToadVille Bay Flag" />
+        <h1 class="site-title">Добродошли - Република ToadVille Bay (Србија)</h1>
+      </div>
+
+      <nav class="navigation-buttons" role="navigation" aria-label="Навигација слетања">
+        <!-- Main CTA -->
+        <a class="nav-btn primary" href="./home.html">Уђи на сајт</a>
+
+        <!-- Secondary actions -->
+        <div class="secondary-nav" aria-label="Секундарна навигација">
+          <a class="nav-btn secondary" href="https://qc-ca.toadvillebay.com">Францусски</a>
+          <a class="nav-btn secondary" href="./about.html">О Нама</a>
+        </div>
+      </nav>
+
+      <footer class="landing-footer">
+        <div class="landing-copyright">
+          © ToadVille Bay од Србије 2019–<span id="current-year"></span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
