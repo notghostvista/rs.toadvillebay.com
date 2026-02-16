@@ -115,7 +115,7 @@ a:hover {
   position: relative;
 }
 .brand-text::before {
-  content: 'CA';
+  content: 'RS';
   position: absolute;
   top: -0.55em;
   right: -2.1em;
